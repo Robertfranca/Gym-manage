@@ -1,0 +1,37 @@
+.titulo{
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+label{
+    display: inline-block;
+    width: 120px;
+    margin: 5px;   
+}
+
+.row{
+    color: #ffffff;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+
+}
+
+
+.conteiner{
+    background-color: black;
+    width: 620px;
+    padding: 20px;
+    margin: 20px auto 0 auto;
+    box-shadow: 0px 6px 10px;
+    border-radius: 5px;
+    margin-top: 150px;
+    
+}
+.buttons {
+    text-align: center;
+}
+
+
+.erroInput{
+    border: 2px solid rgb(253, 0, 0) !important;
+}

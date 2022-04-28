@@ -1,0 +1,37 @@
+footer {
+    display: flex;
+    margin: 120px 80px 50px 80px;
+    justify-content: space-between;
+    color: #0c0c0c;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    
+  }
+  
+  
+  .footer-links-container {
+    display: flex;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+  
+  }
+  .footer-links a {
+    text-decoration: none;
+    color: #0b0c04;
+    font-size: 25px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-icon img {
+    background-color:#000000;
+    border-radius: 100%;
+    width: 65px;
+    padding: 5px;
+    margin: 35px 20px 35px 0;
+  }

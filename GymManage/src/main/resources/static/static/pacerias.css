@@ -1,0 +1,39 @@
+
+#Logos h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.container-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.container-logos img {
+  width: 120px;
+}
+
+.container-logos h2 {
+  font-weight: 700;
+  margin: 15px 0 15px 0;
+}
+
+.container-logos p {
+  color: #92919D;
+  width: 240px;
+}
+
+.container-logos-imagem {
+  display: flex;
+}
+
+.container-imagem {
+  display: flex;
+  flex-direction: column;
+  margin: 45px;
+  height: 225px;
+  align-items: center;
+  justify-content: center;
+}
