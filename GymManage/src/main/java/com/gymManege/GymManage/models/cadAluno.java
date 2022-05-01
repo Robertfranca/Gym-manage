@@ -14,26 +14,20 @@ public class cadAluno implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String rg;
     private String nome;
+    private String sobrenome;  
+    private String senha;
+    private String novamenteSenha;
     private String email;
+    private String CPF;
     private String telefone;
 
-
-    public long getId() {
-        return id;
-    }
-
     public void setId(long id) {
-        this.id = id;
+            this.id = id;
     }
 
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
+        public long getId() {
+        return id;
     }
 
     public String getNome() {
@@ -44,14 +38,45 @@ public class cadAluno implements Serializable {
         this.nome = nome;
     }
 
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }   
+
+    public String getNovamenteSenha() {
+        return novamenteSenha;
+    }
+
+    public void setNovamenteSenha(String novamenteSenha) {
+        this.novamenteSenha = novamenteSenha;
+    } 
+
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }    
+
+    public String getCPF() {
+        return CPF;
     }
 
+    public void setCPF(String cPF) {
+        this.CPF = cPF;
+    }
+    
     public String getTelefone() {
         return telefone;
     }
@@ -60,3 +85,14 @@ public class cadAluno implements Serializable {
         this.telefone = telefone;
     }
 }
+
+
+
+
+
+
+   
+
+
+
+

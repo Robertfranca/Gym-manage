@@ -17,13 +17,14 @@ public class cadastroControler {
     private Repository er;
 
     @RequestMapping(value="/cadastro", method = RequestMethod.GET )
-    public String CadGeren (Model model){
-        model.addAttribute("name","Gabs");
+    public String CadGeren (){
         return "home/Cadastro/cadastro";
     }
 
-    @RequestMapping(value="/cadastro", method = RequestMethod.GET )
+    @RequestMapping(value="/cadastro", method = RequestMethod.POST )
     public String CadGeren (cadAluno cad){
+
+        er.save(cad);
 
         return "home/Cadastro/cadastro";
     }
