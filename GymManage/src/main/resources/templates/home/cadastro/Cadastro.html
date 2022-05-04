@@ -22,64 +22,40 @@
 <body>
 <div id="header"></div>
 
+
 <main>
+    <div>
+        <form method="post">
+            <label>Nome</label>
+            <input type="text" name="nome" id="nome">
+            <label>Email</label>
+            <input type="text" name="email" id="email">
+            <label>cidade</label>
+            <input type="text" name="cidade" id="cidade">
+            <label>telefone</label>
+            <input type="text" name="telefone" id="telefone">
 
-    <div class="conteiner">
-        <form class="Cadastro" method="post" action="/cadastro">
-
-            <h1 class="titulo">Cadastro de alunos</h1>
-            <br>
-            <div class="row">
-                <label for="">Nome </label>
-                <input type="text" placeholder="Nome" >
-            </div>
-            <div class="row">
-                <label for="">Sobrenome</label>
-                <input type="text" placeholder="Sobrenome" >
-            </div>
-            <div class="row">
-                <label for="">Senha</label>
-                <input id="password" type="password"  placeholder="Senha">
-            </div>
-            <div class="row">
-                <label for="">Insira a senha novamente</label>
-                <input id="password" type="password"  placeholder="Senha">
-            </div>
-            <div class="row">
-                <label for="">Email </label>
-                <input id="email" type="email" placeholder="Email@email.com">
-            </div>
-            <div class="row">
-                <label for="">CPF</label>
-                <input id="cpf" type="cpf" placeholder="000.000.000-00" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" >
-            </div>
-
-            <div class="row">
-                <label for="">Telefone</label>
-                <input type="text" id="phone" name="phone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
-            </div>
-
-<!--            aqui vai ter um list com os tipos de planos que podem ser escolhidos-->
-
-            <div class="row">
-                <label for="">Sexo </label>
-                <input type="radio" value="Feminino" id="feminino" name="Sexo" >
-                <label for="">Feminino</label>
-                <input type="radio" value="Masculino" id="masculino" name="Sexo" >
-                <label for="">Masculino</label>
-                <input type="radio" value="Outros" id="Outros" name="Sexo" >
-                <label for="">Outros</label>
-            </div>
-
-            <div class="buttons">
-
-                <input type="reset"  name="b2" value="Limpar">
-                <input id="button"type="submit" name="b1" value="Enviar">
-            </div>
-
+            <button type="submit"></button>
         </form>
     </div>
+        
+    <div>
+        <table border="1">
+            <tr>
+                <td>Nome</td>
+                <td>email</td>
+                <td>cidade</td>
+                <td>telefone</td>
+            </tr>
+            <tr th:each="aluno : ${aluno}">
+                <td><span th:text="${aluno.nome}"></span></td>
+                <td><span th:text="${aluno.email}"></span></td>
+                <td><span th:text="${aluno.cidade}"></span></td>
+                <td><span th:text="${aluno.telefone}"></span></td>
 
+            </tr>
+        </table>
+    </div>
 
 
 </main>
