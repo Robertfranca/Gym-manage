@@ -29,11 +29,13 @@
             <label>Nome</label>
             <input type="text" name="nome" id="nome">
             <label>Email</label>
-            <input type="text" name="email" id="email">
             <label>cidade</label>
             <input type="text" name="cidade" id="cidade">
-            <label>telefone</label>
+            <label>email</label>
             <input type="text" name="telefone" id="telefone">
+            <input type="text" name="emaiil" id="emaill">
+            <label>senha</label>
+            <input type="password" name="senha" id="senha">
 
             <button type="submit"></button>
         </form>
@@ -49,9 +51,10 @@
             </tr>
             <tr th:each="aluno : ${aluno}">
                 <td><span th:text="${aluno.nome}"></span></td>
-                <td><span th:text="${aluno.email}"></span></td>
                 <td><span th:text="${aluno.cidade}"></span></td>
                 <td><span th:text="${aluno.telefone}"></span></td>
+                <td><span th:text="${aluno.senha}"></span></td>
+                <td><span th:text="${aluno.emaiil}"></span></td>
 
             </tr>
         </table>

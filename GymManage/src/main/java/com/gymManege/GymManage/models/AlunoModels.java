@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
+
 public class AlunoModels implements Serializable {
 
 
@@ -18,9 +19,29 @@ public class AlunoModels implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
-    private String email;
+
     private String cidade;
     private String telefone;
+    private String Senha;
+    private String emaiil;
+
+    public String getSenha() {
+        return Senha;
+    }
+
+    public void setSenha(String senha) {
+        Senha = senha;
+    }
+
+    public String getEmaiil() {
+        return emaiil;
+    }
+
+    public void setEmaiil(String emaiil) {
+        this.emaiil = emaiil;
+    }
+
+
 
     public void setId(long id) {
         this.id = id;
@@ -36,14 +57,6 @@ public class AlunoModels implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String senha) {
-        this.email = email;
     }
 
     public String getCidade() {

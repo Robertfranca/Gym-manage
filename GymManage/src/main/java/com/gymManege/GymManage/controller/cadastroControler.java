@@ -28,6 +28,9 @@ public class cadastroControler {
     @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
     public String form(AlunoModels aluno){
         cr.save(aluno);
+        System.out.println(aluno.getEmaiil());
+        System.out.println(aluno.getCidade());
+        System.out.println(aluno.getTelefone());
         return  "redirect:/cadastro";
     }
 
