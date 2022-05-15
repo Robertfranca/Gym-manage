@@ -4,11 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-<<<<<<< HEAD
 @Table(name = "alunos")
-=======
-
->>>>>>> a2625da57ca28f36771cb13bc71c9de77e6ae9a4
 public class AlunoModels implements Serializable {
 
 
@@ -22,15 +18,10 @@ public class AlunoModels implements Serializable {
     private long id;
     @Column(name = "nome", length = 100, nullable = false)
     private String nome;
-<<<<<<< HEAD
     @Column(name = "cidade", length = 50, nullable = false)
-=======
-
->>>>>>> a2625da57ca28f36771cb13bc71c9de77e6ae9a4
     private String cidade;
     @Column(name = "telefone", length = 100, nullable = false)
     private String telefone;
-<<<<<<< HEAD
     @Column(name = "senha", length = 255, nullable = false)
     private String Senha;
     @Column(name = "email", length = 100, nullable = false)
@@ -47,10 +38,6 @@ public class AlunoModels implements Serializable {
     }
 
 
-=======
-    private String Senha;
-    private String emaiil;
->>>>>>> a2625da57ca28f36771cb13bc71c9de77e6ae9a4
 
     public String getSenha() {
         return Senha;

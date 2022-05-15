@@ -26,17 +26,11 @@ public class Security extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception{
         http.csrf().disable().authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/").permitAll()
-<<<<<<< HEAD
                 .antMatchers(HttpMethod.GET, "/sobre").permitAll()
                 .antMatchers(HttpMethod.GET, "/parcerias").permitAll()
                 .antMatchers(HttpMethod.GET, "/contato").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/escolhas", true)
-=======
-                .antMatchers(HttpMethod.GET, "/cadastro").permitAll()
-                .anyRequest().authenticated()
-                .and().formLogin().loginPage("/login").permitAll()
->>>>>>> a2625da57ca28f36771cb13bc71c9de77e6ae9a4
                 .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 
     }
@@ -49,11 +43,7 @@ public class Security extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception{
-<<<<<<< HEAD
         web.ignoring().antMatchers("/static/**","/Imgs/**","/static/**","/footer.html","/header.html","/headerlogin.html");
-=======
-        web.ignoring().antMatchers("/static/**","/Imgs/**","/static/**","/footer.html","/header.html");
->>>>>>> a2625da57ca28f36771cb13bc71c9de77e6ae9a4
     }
 
 
