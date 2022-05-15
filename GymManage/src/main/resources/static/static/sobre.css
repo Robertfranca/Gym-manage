@@ -1,0 +1,28 @@
+
+
+.text{
+    margin: 0 auto;
+    margin-top: 120px;
+    text-align: center;
+    width: 800px;
+    max-width: 100%;
+    color: #fff;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+.text1{
+    margin: 100px;
+    margin-left: 50px;
+    max-width: 100%;
+    color: #fff;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    align-items: left;
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    margin: 10px;
+    width: 250px;
+    max-width: 100%;
+    align-items: left;
+}

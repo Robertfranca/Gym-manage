@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenGym</title>
+  <link rel="stylesheet"  th:href="@{static/choices.css}">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+         $(function () {
+            $("#header").load("headerlogin.html");
+            $("#footer").load("footer.html");
+            $("#Mobile-navbar").load("mobile-navbar.js");
+         });
+      </script>
+  <link rel="icon" type="image/x-icon" href="./Imgs/academia.png">
+
+</head>
+<body>
+<div id="header"></div>
+
+    <label class="Tituloescolhas"> Escolha quem voce quer operar.</label>
+    <ul class="escolhas">
+
+          <a href="">
+            <img src="./Imgs/img2.jpg" alt="">
+          </a>
+
+          <a href="">
+            <img src="./Imgs/img2.jpg" alt="">
+          </a>
+
+    </ul>
+<div id="footer"></div>
+
+</body>
+<script src="./static/login.js"></script>
+</html>

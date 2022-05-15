@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenGym</title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+         $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#Mobile-navbar").load("mobile-navbar.js");
+
+         });
+      </script>
+    <link rel="stylesheet" href="static/Cad.css">
+    <link rel="stylesheet" href="static/header.css">
+    <link rel="icon" type="image/x-icon" href="./Imgs/academia.png">
+
+</head>
+<body>
+<div id="header"></div>
+
+
+<main>
+    <div>
+        <form method="post">
+            <label>Nome</label>
+            <input type="text" name="nome" id="nome">
+            <label>Email</label>
+            <label>cidade</label>
+            <input type="text" name="cidade" id="cidade">
+            <label>email</label>
+            <input type="text" name="telefone" id="telefone">
+            <input type="text" name="emaiil" id="emaill">
+            <label>senha</label>
+            <input type="password" name="senha" id="senha">
+
+            <button type="submit"></button>
+        </form>
+    </div>
+        
+    <div>
+        <table border="1">
+            <tr>
+                <td>Nome</td>
+                <td>email</td>
+                <td>cidade</td>
+                <td>telefone</td>
+                <td>dropvalue</td>
+            </tr>
+            <tr th:each="aluno : ${aluno}">
+                <td><span th:text="${aluno.nome}"></span></td>
+                <td><span th:text="${aluno.cidade}"></span></td>
+                <td><span th:text="${aluno.telefone}"></span></td>
+                <td><span th:text="${aluno.senha}"></span></td>
+                <td><span th:text="${aluno.emaiil}"></span></td>
+                <td><span th:text="${aluno.dropvalue}"></span></td>
+
+            </tr>
+        </table>
+    </div>
+
+
+</main>
+<div id="footer"></div>
+<script src="./static/Cad.js"></script>
+
+</body>
+
+</html>
