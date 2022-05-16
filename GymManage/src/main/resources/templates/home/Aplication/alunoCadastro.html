@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenGym</title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+         $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#Mobile-navbar").load("mobile-navbar.js");
+
+         });
+      </script>
+    <link rel="stylesheet" href="./static/Cad.css">
+    <link rel="icon" type="image/x-icon" href="./Imgs/academia.png">
+
+</head>
+<body>
+<div id="header"></div>
+
+
+<main>
+    <div>
+
+        <div class="conteiner">
+        <form method="post" class="Cadastro">
+
+            <h1 class="titulo">Cadastro</h1>
+            <br>
+
+            <div class="row">
+                <label>Nome </label>
+                <input type="text" id="nome" name="nome" placeholder="Nome" >
+            </div>
+
+            <div class="row">
+                <label>Sobrenome</label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" >
+            </div>
+
+            <div class="row">
+                <label>Email </label>
+                <input id="email" name="email" type="email" placeholder="Email@email.com">
+            </div>
+
+            <div class="row">
+                <label>CPF</label>
+                <input id="cpf" name="cpf" type="cpf" placeholder="000.000.000-00" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" >
+            </div>
+
+            <div class="row">
+                <label>Telefone</label>
+                <input type="text" id="telefone" name="telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
+            </div>
+            <div class="row">
+                <label>Peso</label>
+                <input type="text" id="peso" name="peso" placeholder="peso" >
+                <label>Altura</label>
+                <input type="text" id="altura" name="altura" placeholder="Altura" >
+            </div>
+
+            <div class="row">
+                <label>Escolha o plano</label>
+                <select name="dropvalue" id="dropvalue">
+                    <option value="basic">basic</option>
+                    <option value="intermedium">intermedium</option>
+                    <option value="Advanced">Advanced</option>
+                    <option value="Premium">Premium</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>turma </label>
+                <input type="text" id="turma" name="turma" placeholder="turma" >
+            </div>
+
+
+
+
+            <div class="buttons">
+
+                <input type="reset"  name="b2" value="Limpar">
+                <button type="submit" name="b1"></button>
+            </div>
+
+        </form>
+
+    <div>
+        <table border="1">
+            <tr>
+                <td>Nome</td>
+                <td>sobrenome</td>
+                <td>email</td>
+                <td>cpf</td>
+                <td>telefone</td>
+                <td>peso</td>
+                <td>altura</td>
+                <td>dropvalue</td>
+
+            </tr>
+            <tr th:each="alunoList : ${alunoList}">
+                <td><span th:text="${alunoList.nome}"></span></td>
+                <td><span th:text="${alunoList.sobrenome}"></span></td>
+                <td><span th:text="${alunoList.email}"></span></td>
+                <td><span th:text="${alunoList.cpf}"></span></td>
+                <td><span th:text="${alunoList.telefone}"></span></td>
+                <td><span th:text="${alunoList.peso}"></span></td>
+                <td><span th:text="${alunoList.altura}"></span></td>
+                <td><span th:text="${alunoList.dropvalue}"></span></td>
+
+
+            </tr>
+        </table>
+    </div>
+        </div>
+</div>
+</main>
+<div id="footer"></div>
+<script src="./static/Cad.js"></script>
+
+</body>
+
+</html>
