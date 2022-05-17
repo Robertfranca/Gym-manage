@@ -38,9 +38,6 @@ public class AlunoCadModels {
     @Column(name = "dropvalue")
     private String dropvalue;
 
-    @Column(name = "turma")
-    private String turma;
-
     public long getId() {
         return id;
     }
@@ -114,11 +111,5 @@ public class AlunoCadModels {
         this.dropvalue = dropvalue;
     }
 
-    public String getTurma() {
-        return turma;
-    }
 
-    public void setTurma(String turma) {
-        this.turma = turma;
-    }
 }
