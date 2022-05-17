@@ -11,7 +11,6 @@ public class AlunoModels implements Serializable {
     private static final long serialVersionUid= 1l;
 
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
