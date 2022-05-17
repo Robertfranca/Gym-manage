@@ -17,9 +17,6 @@ public class ProfCadModels {
     @Column(name = "nome", length = 100)
     private String nome;
 
-    @Enumerated(EnumType.STRING)
-    private TurmaProf Turma;
-
 
     public long getId() {
         return id;
@@ -37,11 +34,4 @@ public class ProfCadModels {
         this.nome = nome;
     }
 
-    public TurmaProf getTurma() {
-        return Turma;
-    }
-
-    public void setTurma(TurmaProf turma) {
-        Turma = turma;
-    }
 }

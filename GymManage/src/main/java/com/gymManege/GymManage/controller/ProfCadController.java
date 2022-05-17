@@ -2,7 +2,6 @@ package com.gymManege.GymManage.controller;
 
 import com.gymManege.GymManage.models.ProfCadModels;
 import com.gymManege.GymManage.repository.ProfCadRepository;
-import com.gymManege.GymManage.repository.ProfRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,8 +27,7 @@ public class ProfCadController {
     @RequestMapping(value = "/prof_cadastro", method = RequestMethod.POST)
     public String form(ProfCadModels profCad){
         pr.save(profCad);
-        System.out.println(profCad.getNome());
-        System.out.println(profCad.getTurma());
+
         return "redirect:/prof_cadastro";
     }
 
