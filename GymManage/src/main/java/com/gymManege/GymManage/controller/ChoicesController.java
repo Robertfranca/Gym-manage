@@ -16,6 +16,11 @@ public class ChoicesController {
         model.addAttribute("name","Gabs");
         return "home/Aplication/Operaluno";
     }
+    @GetMapping("/operarprofessor")
+    public String operarprofessor(Model model){
+        model.addAttribute("name","Gabs");
+        return "home/Aplication/Operprofessor";
+    }
 
 
 

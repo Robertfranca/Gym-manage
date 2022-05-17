@@ -22,6 +22,19 @@ public class ProfCadModels {
 
     @Column(name = "email", length = 100)
     private String email;
+    @Column(name = "cref", length = 100)
+    private String cref;
+
+    @Column(name = "dropvalue")
+    private String dropvalue;
+
+    public String getCref() {
+        return cref;
+    }
+
+    public void setCref(String cref) {
+        this.cref = cref;
+    }
 
     @Column(name = "cpf", length = 255)
     private String cpf;
@@ -29,14 +42,7 @@ public class ProfCadModels {
     @Column(name = "telefone", length = 100)
     private String telefone;
 
-    @Column(name = "peso", length = 100)
-    private String peso;
 
-    @Column(name = "altura", length = 100)
-    private String altura;
-
-    @Column(name = "dropvalue")
-    private String dropvalue;
 
     public String getSobrenome() {
         return sobrenome;
@@ -68,22 +74,6 @@ public class ProfCadModels {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public String getPeso() {
-        return peso;
-    }
-
-    public void setPeso(String peso) {
-        this.peso = peso;
-    }
-
-    public String getAltura() {
-        return altura;
-    }
-
-    public void setAltura(String altura) {
-        this.altura = altura;
     }
 
     public String getDropvalue() {

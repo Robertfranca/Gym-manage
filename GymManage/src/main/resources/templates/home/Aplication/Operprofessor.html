@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GenGym</title>
-    <link rel="stylesheet" th:href="@{static/choices.css}">
+    <link rel="stylesheet"  th:href="@{static/choices.css}">
+    <link rel="stylesheet" th:href="@{static/style.css}" />
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script>
          $(function () {
@@ -14,26 +15,28 @@
             $("#Mobile-navbar").load("mobile-navbar.js");
          });
       </script>
+    <link rel="icon" type="image/x-icon" href="./Imgs/academia.png">
 
 </head>
 <body>
 <div id="header"></div>
 
-            <label class="Tituloescolhas"> Escolha quem voce quer operar.</label>
+<label class="Tituloescolhas"> Escolha quem voce quer operar.</label>
 
-                <div class="zoom">
-                    <ul class="escolhas">
-                        <a href="/operarprofessor">
-                            <img src="./Imgs/Professor.jpg" alt="">
-                        </a>
+<ul class="escolhas">
+    <a href="/prof_cadastro">
+        <img src="./Imgs/cadProfessor.jpg" alt="">
+    </a>
 
-                        <a href="/operaraluno">
-                            <img src="./Imgs/Aluno.jpg" alt="">
-                        </a>
+    <a href="/prof_list">
+        <img src="./Imgs/listprofessor.jpg" alt="">
+    </a>
 
-                    </ul>
-                </div>
+</ul>
+
+
 <div id="footer"></div>
 
 </body>
+<script src="./static/login.js"></script>
 </html>

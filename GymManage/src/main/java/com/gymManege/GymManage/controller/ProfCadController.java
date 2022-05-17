@@ -16,18 +16,26 @@ public class ProfCadController {
     @Autowired
     private ProfCadRepository pr;
 
-    @GetMapping("/prof_cadastro")
+    @GetMapping("/prof_list")
     public ModelAndView list_profs(Model model){
+        ModelAndView mv = new ModelAndView("home/Aplication/proflist");
+        Iterable<ProfCadModels> profList= pr.findAll();
+        mv.addObject("profList", profList);
+        return mv;
+    }
+    @GetMapping("/prof_cadastro")
+    public ModelAndView cadastro_profs(Model model){
         ModelAndView mv = new ModelAndView("home/Aplication/profCadastro");
         Iterable<ProfCadModels> profList= pr.findAll();
         mv.addObject("profList", profList);
         return mv;
     }
 
+
+
     @RequestMapping(value = "/prof_cadastro", method = RequestMethod.POST)
     public String form(ProfCadModels profCad){
         pr.save(profCad);
-
         return "redirect:/prof_cadastro";
     }
 

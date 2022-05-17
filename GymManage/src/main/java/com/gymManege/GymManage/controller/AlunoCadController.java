@@ -38,16 +38,8 @@ public class AlunoCadController {
     @RequestMapping(value = "/aluno_cadastro", method = RequestMethod.POST)
     public String form(AlunoCadModels alunoCad){
         ar.save(alunoCad);
-        System.out.println(alunoCad.getAltura());
-        System.out.println(alunoCad.getCpf());
-        System.out.println(alunoCad.getDropvalue());
-        System.out.println(alunoCad.getEmail());
-        System.out.println(alunoCad.getSobrenome());
-        System.out.println(alunoCad.getPeso());
-        System.out.println(alunoCad.getTurma());
-
         System.out.println(alunoCad.getTelefone());
-        return  "redirect:/aluno_cadastro";
+        return  "redirect:/aluno_list";
     }
 
     @RequestMapping("/deletarEvento")

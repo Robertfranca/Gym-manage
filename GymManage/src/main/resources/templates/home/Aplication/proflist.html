@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenGym</title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+         $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#Mobile-navbar").load("mobile-navbar.js");
+
+         });
+      </script>
+    <link rel="stylesheet" href="./static/contato.css">
+    <link rel="stylesheet" th:href="@{static/style.css}" />
+    <link rel="icon" type="image/x-icon" href="./Imgs/academia.png">
+
+</head>
+<body>
+<div id="header"></div>
+
+
+<main>
+    <div>
+        <div class="table">
+            <table class="dados">
+                <tr>
+                    <td>Nome</td>
+                    <td>sobrenome</td>
+                    <td>email</td>
+                    <td>cpf</td>
+                    <td>CREF</td>
+                    <td>telefone</td>
+                    <td>Aulas</td>
+                    <td>Excluir</td>
+                </tr>
+                <tr th:each="profList : ${profList}">
+                    <td><span th:text="${profList.nome}"></span></td>
+                    <td><span th:text="${profList.sobrenome}"></span></td>
+                    <td><span th:text="${profList.email}"></span></td>
+                    <td><span th:text="${profList.cpf}"></span></td>
+                    <td><span th:text="${profList.cref}"></span></td>
+                    <td><span th:text="${profList.telefone}"></span></td>
+                    <td><span th:text="${profList.dropvalue}"></span></td>
+                    <td> <a href="/prof_cadastro">
+                        <img src="./Imgs/lixo.png" alt=""></a></button></td>
+                </tr>
+            </table>
+        </div>
+
+        <a href="/operarprofessor">
+            <label class="buttonlogin">voltar</label>
+        </a>
+    </div>
+</main>
+<div id="footer"></div>
+<script src="./static/Cad.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>
