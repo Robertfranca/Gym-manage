@@ -87,33 +87,6 @@
 
         </form>
 
-    <div>
-        <table border="1">
-            <tr>
-                <td>Nome</td>
-                <td>sobrenome</td>
-                <td>email</td>
-                <td>cpf</td>
-                <td>telefone</td>
-                <td>peso</td>
-                <td>altura</td>
-                <td>dropvalue</td>
-
-            </tr>
-            <tr th:each="alunoList : ${alunoList}">
-                <td><span th:text="${alunoList.nome}"></span></td>
-                <td><span th:text="${alunoList.sobrenome}"></span></td>
-                <td><span th:text="${alunoList.email}"></span></td>
-                <td><span th:text="${alunoList.cpf}"></span></td>
-                <td><span th:text="${alunoList.telefone}"></span></td>
-                <td><span th:text="${alunoList.peso}"></span></td>
-                <td><span th:text="${alunoList.altura}"></span></td>
-                <td><span th:text="${alunoList.dropvalue}"></span></td>
-
-
-            </tr>
-        </table>
-    </div>
         </div>
 </div>
 </main>

@@ -25,7 +25,7 @@ public class ProfCadController {
         return mv;
     }
 
-    @RequestMapping(value = "/aluno_cadastro", method = RequestMethod.POST)
+    @RequestMapping(value = "/prof_cadastro", method = RequestMethod.POST)
     public String form(ProfCadModels profCad){
         pr.save(profCad);
         System.out.println(profCad.getNome());

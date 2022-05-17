@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenGym</title>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+         $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#Mobile-navbar").load("mobile-navbar.js");
+
+         });
+      </script>
+  <link rel="stylesheet" href="./static/contato.css">
+  <link rel="icon" type="image/x-icon" href="./Imgs/academia.png">
+
+</head>
+<body>
+<div id="header"></div>
+
+
+<main>
+  <div>
+        <div class="table">
+          <table class="dados">
+            <tr>
+              <td>Nome</td>
+              <td>sobrenome</td>
+              <td>email</td>
+              <td>cpf</td>
+              <td>telefone</td>
+              <td>peso</td>
+              <td>altura</td>
+              <td>Plano</td>
+              <td>Excluir</td>
+            </tr>
+            <tr th:each="alunoList : ${alunoList}">
+              <td><span th:text="${alunoList.nome}"></span></td>
+              <td><span th:text="${alunoList.sobrenome}"></span></td>
+              <td><span th:text="${alunoList.email}"></span></td>
+              <td><span th:text="${alunoList.cpf}"></span></td>
+              <td><span th:text="${alunoList.telefone}"></span></td>
+              <td><span th:text="${alunoList.peso}"></span></td>
+              <td><span th:text="${alunoList.altura}"></span></td>
+              <td><span th:text="${alunoList.dropvalue}"></span></td>
+              <td> <a href="/aluno_cadastro">
+                <img src="./Imgs/lixo.png" alt=""></a></button></td>
+
+
+            </tr>
+          </table>
+        </div>
+  </div>
+</main>
+<div id="footer"></div>
+<script src="./static/Cad.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>
