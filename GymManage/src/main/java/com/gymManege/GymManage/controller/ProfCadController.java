@@ -39,6 +39,13 @@ public class ProfCadController {
         return "redirect:/prof_cadastro";
     }
 
+    @RequestMapping("/excluir")
+    public String deletar (long id){
+        pr.deleteById(id);
+        return "redirect:/prof_list";
+    }
+
+
 
 }
 

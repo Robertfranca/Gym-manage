@@ -52,7 +52,7 @@
                     <td><span th:text="${profList.cref}"></span></td>
                     <td><span th:text="${profList.telefone}"></span></td>
                     <td><span th:text="${profList.dropvalue}"></span></td>
-                    <td> <a href="/prof_cadastro">
+                    <td> <a th:href="@{/excluir(id=${profList.id})}">
                         <img src="./Imgs/lixo.png" alt=""></a></button></td>
                 </tr>
             </table>
