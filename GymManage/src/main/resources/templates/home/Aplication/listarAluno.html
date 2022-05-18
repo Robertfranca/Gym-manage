@@ -55,7 +55,7 @@
               <td><span th:text="${alunoList.peso}"></span></td>
               <td><span th:text="${alunoList.altura}"></span></td>
               <td><span th:text="${alunoList.dropvalue}"></span></td>
-              <td> <a href="/aluno_cadastro">
+              <td> <a th:href="@{/deletar(id=${alunoList.id})}">
                 <img src="./Imgs/lixo.png" alt=""></a></button></td>
 
 

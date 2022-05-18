@@ -29,7 +29,6 @@ public class Security extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/sobre").permitAll()
                 .antMatchers(HttpMethod.GET, "/parcerias").permitAll()
                 .antMatchers(HttpMethod.GET, "/contato").permitAll()
-                .antMatchers(HttpMethod.GET, "/aluno_cadastro").permitAll()
 
                 .anyRequest().authenticated()
                 .and().formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/escolhas", true)
