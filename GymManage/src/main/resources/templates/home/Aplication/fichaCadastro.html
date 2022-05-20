@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenGym</title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+         $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#Mobile-navbar").load("mobile-navbar.js");
+
+         });
+      </script>
+    <link rel="stylesheet" href="./static/Cad.css">
+    <link rel="stylesheet" th:href="@{static/style.css}" />
+    <link rel="icon" type="image/x-icon" href="./Imgs/academia.png">
+
+</head>
+<body>
+<div id="header"></div>
+
+
+<main>
+    <div>
+
+        <div class="conteiner">
+        <form method="post" class="Cadastro">
+
+            <h1 class="titulo">Cadastro aluno</h1>
+            <br>
+
+            <div class="row">
+                <label>Nome aluno </label>
+                <input type="text" id="nome_aluno" name="nome_aluno" placeholder="Nome aluno" >
+            </div>
+
+            <div class="row">
+                <label>Sobrenome</label>
+                <input type="text" id="nome_prf" name="nome_prf" placeholder="Nome professor" >
+            </div>
+            <div class="row">
+                <label>horario </label>
+                <input type="text" id="horario" name="horario" placeholder="horario" >
+            </div>
+
+            <div class="row">
+                <label>Escolha o tipo de ficha</label>
+                <select name="dropvalue" id="dropvalue">
+                    <option value="musculacao">musculacão</option>
+                    <option value="danca">dança</option>
+                    <option value="luta">luta</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+
+                <input type="reset"  name="b2" value="Limpar">
+                <button type="submit" name="b1">enviar</button>
+            </div>
+
+        </form>
+
+        </div>
+
+        <a href="/operarficha">
+            <label class="buttonlogin">voltar</label>
+        </a>
+</div>
+</main>
+<div id="footer"></div>
+<script src="./static/Cad.js"></script>
+
+</body>
+
+</html>

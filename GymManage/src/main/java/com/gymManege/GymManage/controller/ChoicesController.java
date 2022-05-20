@@ -22,6 +22,12 @@ public class ChoicesController {
         return "home/Aplication/Operprofessor";
     }
 
+    @GetMapping("/operarficha")
+    public String operarficha(Model model){
+        model.addAttribute("name","Gabs");
+        return "home/Aplication/Operficha";
+    }
+
 
 
 

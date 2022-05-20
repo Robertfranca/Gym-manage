@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GenGym</title>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+         $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#Mobile-navbar").load("mobile-navbar.js");
+
+         });
+      </script>
+  <link rel="stylesheet" href="./static/contato.css">
+  <link rel="stylesheet" th:href="@{static/style.css}" />
+  <link rel="icon" type="image/x-icon" href="./Imgs/academia.png">
+
+</head>
+<body>
+<div id="header"></div>
+
+
+<main>
+  <div>
+        <div class="table">
+          <table class="dados">
+            <tr>
+              <td>Nome aluno</td>
+              <td>Nome professor</td>
+              <td>horario</td>
+              <td>tipo de ficha</td>
+                <td>deletar</td>
+
+            </tr>
+            <tr th:each="FichaList : ${FichaList}">
+              <td><span th:text="${FichaList.nome_aluno}"></span></td>
+              <td><span th:text="${FichaList.nome_prf}"></span></td>
+              <td><span th:text="${FichaList.horario}"></span></td>
+              <td><span th:text="${FichaList.dropvalue}"></span></td>
+              <td> <a th:href="@{/deletarficha(id=${FichaList.id})}">
+                <img src="./Imgs/lixo.png" alt=""></a></button></td>
+
+
+            </tr>
+          </table>
+        </div>
+            <a href="/operarficha">
+              <label class="buttonlogin">voltar</label>
+            </a>
+  </div>
+</main>
+<div id="footer"></div>
+<script src="./static/Cad.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>
